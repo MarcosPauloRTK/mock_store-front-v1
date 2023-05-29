@@ -1,0 +1,65 @@
+.Header {
+  background-color: var(--green);
+
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 90px;
+
+  box-shadow: 0 0 10px #00000065;
+}
+
+.Header img {
+  height: 60px;
+}
+
+.Header ul {
+  display: flex;
+  gap: 50px;
+  flex: 1;
+  list-style: none;
+  padding-inline-start: 100px;
+}
+
+.Header .active {
+  font-weight: bold;
+}
+
+.Header .HeaderButton {
+  background-color: var(--green);
+}
+
+.Header .HeaderButton:hover {
+  box-shadow: 2px 2px 5px #00963e;
+}
+
+.Header .Icon {
+  scale: 1.5;
+  color: white;
+}
+
+.AnimatedUnderline {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.AnimatedUnderline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+}
+
+.AnimatedUnderline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
